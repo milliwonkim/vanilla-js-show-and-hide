@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./src/styles.css" />
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="inputBox">
+      <input
+        type="password"
+        name=""
+        placeholder="Enter Password"
+        id="password"
+      />
+      <div id="toggle" onclick="showHide()"></div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/d441320ed7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      const password = document.getElementById("password");
+      const toggle = document.getElementById("toggle");
+
+      function showHide() {
+        if (password.type === "password") {
+          password.setAttribute("type", "text");
+          toggle.classList.add("hide");
+        } else {
+          password.setAttribute("type", "password");
+          toggle.classList.remove("hide");
+        }
+      }
+    </script>
+  </body>
+</html>
